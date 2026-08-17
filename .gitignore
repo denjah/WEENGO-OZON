@@ -3,9 +3,11 @@
 !.nojekyll
 !README.md
 !index.html
+!.github/
+!.github/workflows/
+!.github/workflows/pages.yml
 !weengo_console/
 !weengo_console/**
 weengo_console/__pycache__/
 !НАСТОЛЬНЫЙ ФУТБОЛ MACCABI MINI/
 !НАСТОЛЬНЫЙ ФУТБОЛ MACCABI MINI/**
-
