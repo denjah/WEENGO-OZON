@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEENGO Studio — Review Workstation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260817-4">
+</head>
+<body>
+  <!-- TOP SYSTEM HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="brand-container">
+        <img src="/static/WEENGO_LOGO_ORIGINAL_WHITE.svg" alt="Weengo" class="brand-logo logo-dark" />
+        <img src="/static/WEENGO_LOGO_ORIGINAL.svg" alt="Weengo" class="brand-logo logo-light" />
+        <span class="brand-sub">STUDIO</span>
+      </div>
+      
+      <div class="header-divider"></div>
+      
+      <div class="product-dropdown-wrap">
+        <svg class="ui-icon" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+        <select id="headerProductSelect" class="header-select">
+          <option value="НАСТОЛЬНЫЙ ФУТБОЛ MACCABI MINI" selected>НАСТОЛЬНЫЙ ФУТБОЛ MACCABI MINI</option>
+          <option value="ХОККЕЙ JERSEY">ХОККЕЙ JERSEY</option>
+          <option value="ТЕННИСНЫЙ СТОЛ ДЛЯ ПОМЕЩЕНИЙ WINNER S-150 INDOOR">WINNER S-150 INDOOR</option>
+          <option value="АЭРОХОККЕЙ RIDER 5 Ф">АЭРОХОККЕЙ RIDER 5 Ф</option>
+          <option value="НАБОР ДЛЯ ИГРЫ PICKLEBALL">НАБОР ДЛЯ ИГРЫ PICKLEBALL</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- MAIN SEGMENTED NAV TABS -->
+    <nav class="nav-segmented">
+      <button class="nav-tab active" data-tab="review-studio">
+        <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+        <span>Ревизия</span>
+        <span class="badge-count">10</span>
+      </button>
+      <button class="nav-tab" data-tab="dashboard">
+        <svg class="ui-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+        <span>Дашборд</span>
+      </button>
+      <button class="nav-tab" data-tab="catalog">
+        <svg class="ui-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        <span>Каталог (21)</span>
+      </button>
+        <button class="nav-tab" data-tab="ai-inspector">
+        <svg class="ui-icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"></rect><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+          <span>Сводка правок</span>
+      </button>
+      <button class="nav-tab" data-tab="design-systems">
+        <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+        <span>Дизайн-системы</span>
+      </button>
+    </nav>
+
+    <!-- RIGHT STATUS & CONTROLS -->
+    <div class="header-right">
+      <div class="sync-status">
+        <span class="status-dot"></span>
+        <span class="status-label">Синхронизировано</span>
+      </div>
+
+      <div class="theme-toggle-group">
+        <button class="theme-btn active" data-theme-val="dark" title="Тёмная тема">
+          <svg class="ui-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="theme-btn" data-theme-val="light" title="Светлая тема">
+          <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+      </div>
+
+      <button id="saveBtn" class="btn btn-primary btn-compact">
+        <svg class="ui-icon" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+        <span>Сохранить</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN WORKSPACE -->
+  <main class="app-main">
+
+    <!-- ============================================== -->
+    <!-- TAB 1: REVIEW STUDIO                           -->
+    <!-- ============================================== -->
+    <section id="tab-review-studio" class="tab-pane active">
+      
+      <!-- COLLAPSIBLE ACCORDION FILMSTRIP -->
+      <div class="filmstrip-accordion">
+        <div class="filmstrip-header" id="filmstripHeader">
+          <div class="filmstrip-meta">
+            <svg class="ui-icon accordion-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <span class="filmstrip-title">Лента карточек драфта</span>
+            <span class="filmstrip-subtitle" id="reviewMetaLine">Maccabi Mini · актуальные правки арт-директора</span>
+          </div>
+          <div class="filmstrip-quick-stats">
+            <span class="badge-mini danger" id="setCriticalCount">17 критичных</span>
+            <span class="badge-mini warning" id="setImportantCount">15 важных</span>
+            <span class="badge-mini" id="setTasksCount">34 задачи</span>
+          </div>
+        </div>
+        
+        <div class="filmstrip-body" id="filmstripBody">
+          <div class="carousel-strip" id="carouselStrip">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKSTATION GRID -->
+      <div class="workstation-layout">
+        
+        <!-- LEFT/CENTER: WORKSTATION CANVAS -->
+        <div class="canvas-panel">
+          <!-- PRECISION TOOLBAR -->
+          <div class="canvas-toolbar">
+            <div class="toolbar-section">
+              <span class="section-label">Инструмент</span>
+              <div class="tool-segmented">
+                <button class="tool-btn active" data-tool="select" title="Выбор и перемещение [V]">
+                  <svg class="ui-icon" viewBox="0 0 24 24"><path d="M3 3l7 18 3-7 7-3L3 3z"></path></svg>
+                  <span>Курсор</span>
+                </button>
+                <button class="tool-btn" data-tool="arrow" title="Стрелка-указатель [A]">
+                  <svg class="ui-icon" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  <span>Стрелка</span>
+                </button>
+                <button class="tool-btn" data-tool="pin" title="Маркер с комментарием [P]">
+                  <svg class="ui-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Пин</span>
+                </button>
+                <button class="tool-btn" data-tool="task" title="Чекбокс задачи [T]">
+                  <svg class="ui-icon" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  <span>Задача</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="toolbar-divider"></div>
+
+            <!-- COLOR MARKER -->
+            <div class="toolbar-section">
+              <span class="section-label">Цвет</span>
+              <div class="color-swatches">
+                <button class="color-swatch active" data-color="#EF4444" style="--c:#EF4444" title="Критическая ошибка"></button>
+                <button class="color-swatch" data-color="#F59E0B" style="--c:#F59E0B" title="Замечание"></button>
+                <button class="color-swatch" data-color="#10B981" style="--c:#10B981" title="Одобрено"></button>
+                <button class="color-swatch" data-color="#38BDF8" style="--c:#38BDF8" title="Инфо"></button>
+              </div>
+            </div>
+
+            <div class="toolbar-divider"></div>
+
+            <!-- LAYER TOGGLES -->
+            <div class="toolbar-section">
+              <span class="section-label">Слои</span>
+              <div class="layers-group">
+                <button class="layer-toggle active" id="toggleAiLayer" title="Показать/скрыть AI аудит">
+                  <span class="toggle-indicator ai"></span>
+                  <span id="reviewPinsLabel">Метки проверки</span>
+                </button>
+                <button class="layer-toggle active" id="toggleAdLayer" title="Показать или скрыть только стрелки и пины на изображении">
+                  <span class="toggle-indicator ad"></span>
+                  <span>Графические пометки</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="toolbar-divider"></div>
+
+            <!-- ZOOM CONTROLS -->
+            <div class="toolbar-section zoom-section">
+              <button class="tool-btn icon-only" id="zoomOutBtn" title="Уменьшить">
+                <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </button>
+              <span class="zoom-value" id="zoomLevelText">100%</span>
+              <button class="tool-btn icon-only" id="zoomInBtn" title="Увеличить">
+                <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </button>
+              <button class="tool-btn icon-only" id="zoomResetBtn" title="Сбросить масштаб">
+                <svg class="ui-icon" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+              </button>
+              <button class="tool-btn icon-only danger" id="deleteSelectedBtn" title="Удалить выбранную графическую пометку" disabled>
+                <svg class="ui-icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+              </button>
+              <button class="tool-btn icon-only danger" id="clearCanvasBtn" title="Очистить слой слайда">
+                <svg class="ui-icon" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- LABORATORY WORKSPACE STAGE -->
+          <div class="canvas-viewport" id="canvasViewport">
+            <div class="empty-stage-state" id="emptyStageState" style="display:none;">
+               <div class="empty-state-icon">
+                  <svg viewBox="0 0 24 24" class="ui-icon" style="width:48px;height:48px;opacity:0.3;margin-bottom:16px"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+               </div>
+               <div class="empty-state-text">Ожидание данных...<br>Выберите карточку из ленты для ревью</div>
+            </div>
+            <div class="card-stage" id="cardStage">
+              <!-- CARD IMAGE -->
+              <img id="cardImage" class="stage-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Card" draggable="false">
+              
+              <!-- VECTOR OVERLAY -->
+              <svg id="svgOverlay" class="stage-svg" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+
+              <!-- PINS & TASKS LAYER -->
+              <div id="pinsOverlay" class="stage-pins"></div>
+            </div>
+          </div>
+
+          <!-- TECHNICAL AUDIT FOOTER -->
+          <div class="technical-footer">
+            <div class="score-block">
+              <div class="score-badge" id="aiScoreVal">5</div>
+              <div class="score-info">
+                <span class="score-label">Замечания</span>
+                <span class="score-desc" id="aiScoreCategory">3 критичных · 2 важных</span>
+              </div>
+            </div>
+
+            <div class="audit-chips-flow">
+              <div class="audit-chip error" id="aiCompositionNote">
+                <span class="chip-tag" id="issueTag1">КРИТИЧНО · 1.1</span>
+                <span class="chip-text" id="aiCompText">Текст плохо читается</span>
+              </div>
+              <div class="audit-chip warning" id="aiMeaningNote">
+                <span class="chip-tag" id="issueTag2">КРИТИЧНО · 1.2</span>
+                <span class="chip-text" id="aiMeanText">Плашки перекрывают товар</span>
+              </div>
+              <div class="audit-chip info" id="aiContrastNote">
+                <span class="chip-tag" id="issueTag3">ВАЖНО · 1.3</span>
+                <span class="chip-text" id="aiContText">Иконки не образуют систему</span>
+              </div>
+            </div>
+
+            <div class="verdict-controls">
+              <span class="verdict-label">Статус:</span>
+              <div class="verdict-buttons">
+                <button class="verdict-btn rejected" data-status="rejected">Переделать</button>
+                <button class="verdict-btn needs_fix" data-status="needs_fix">В работе</button>
+                <button class="verdict-btn approved" data-status="approved">Готово к проверке</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT PANEL: TASKS & SPECIFICATION -->
+        <aside class="sidebar-panel">
+          <div class="sidebar-top">
+            <div>
+              <h3 class="slide-main-title" id="currentSlideTitle">Карточка 01</h3>
+              <span class="slide-role-tag" id="currentSlideRole">Слайд 3 по ТЗ</span>
+              <code class="slide-source-file" id="currentSlideFile">photo_1.jpg</code>
+            </div>
+            <button class="btn btn-secondary btn-compact" id="exportTicketBtn">
+              <svg class="ui-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <span>Сводное ТЗ</span>
+            </button>
+          </div>
+
+          <div class="review-source-card">
+            <div class="review-source-row">
+              <span id="reviewSourceLabel">ПРАВКИ_MACCABI_MINI.md</span>
+              <span class="review-source-status">Правки подключены</span>
+            </div>
+            <p id="currentStateSummary">Краткое описание текущего состояния карточки.</p>
+            <p class="review-source-help" id="reviewHelpText">Замечания ниже загружаются из файла и видны всегда. Переключатель «Графические пометки» управляет только стрелками и пинами на изображении.</p>
+          </div>
+
+          <div class="issues-container">
+            <div class="tasks-title-row">
+              <span class="section-title" id="issuesCount">Правки арт-директора (5)</span>
+              <span class="tasks-sub" id="issuesBreakdown">3 критичных · 2 важных</span>
+            </div>
+            <div class="issues-list" id="issuesList"></div>
+          </div>
+
+          <!-- CHECKLIST -->
+          <div class="tasks-container">
+            <div class="tasks-title-row">
+              <span class="section-title" id="tasksCount">Что нужно сделать (5)</span>
+              <span class="tasks-sub" id="tasksProgress">0 из 5 готово</span>
+            </div>
+            <div class="tasks-list" id="tasksList">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+
+          <!-- ADD TASK -->
+          <div class="task-add-row">
+            <input type="text" id="newTaskInput" class="task-input" placeholder="Добавить пункт ТЗ дизайнеру..." />
+            <button id="addTaskBtn" class="btn btn-secondary btn-compact">Добавить</button>
+          </div>
+
+          <details class="global-rules-panel">
+            <summary>Правила для всего набора <span id="globalRulesCount">4</span></summary>
+            <div class="global-rules-list" id="globalRulesList"></div>
+          </details>
+
+          <!-- ANNOTATIONS LIST -->
+          <div class="annotations-block">
+            <div class="tasks-title-row">
+              <span class="section-title">Стрелки и пины (<span id="annCount">0</span>)</span>
+              <button class="btn-link danger" id="deleteAllAnnotationsBtn" type="button">Удалить все</button>
+            </div>
+            <p class="annotations-help">Кликните стрелку или «Выбрать». Тяните линию целиком либо круглые точки на концах. Delete удаляет выбранную пометку.</p>
+            <div class="annotations-list" id="annotationsList">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 2: DASHBOARD                               -->
+    <!-- ============================================== -->
+    <section id="tab-dashboard" class="tab-pane">
+      <div class="page-container">
+        <div class="page-head">
+          <div>
+            <h1 class="page-title">Сводный дашборд производства</h1>
+            <p class="page-lead">Мониторинг 21 позиции каталога Weengo / Weekend Billiard</p>
+          </div>
+          <div class="meta-status-pill">Синхронизировано с файловой системой</div>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-metric">
+            <span class="metric-val">21</span>
+            <span class="metric-label">Товаров в каталоге</span>
+          </div>
+          <div class="kpi-metric">
+            <span class="metric-val">186</span>
+            <span class="metric-label">Карточек запланировано</span>
+          </div>
+          <div class="kpi-metric warning">
+            <span class="metric-val">10</span>
+            <span class="metric-label">На ревизии (Maccabi Mini)</span>
+          </div>
+          <div class="kpi-metric success">
+            <span class="metric-val">22</span>
+            <span class="metric-label">Утверждено в релиз</span>
+          </div>
+          <div class="kpi-metric danger">
+            <span class="metric-val">3.2</span>
+            <span class="metric-label">Средний AI Score (Maccabi)</span>
+          </div>
+        </div>
+
+        <div class="panel-card">
+          <div class="panel-header">
+            <h3>Реестр каталога (21 позиция)</h3>
+            <span class="panel-meta">8 обязательных папок стандартизированы</span>
+          </div>
+          <div class="table-wrap">
+            <table class="technical-table" id="productsTable">
+              <thead>
+                <tr>
+                  <th>Модель товара</th>
+                  <th>_DATA</th>
+                  <th>_COPY</th>
+                  <th>_CARD_MAP</th>
+                  <th>REVIEW</th>
+                  <th>_OUTPUT</th>
+                  <th>Статус</th>
+                  <th>Действие</th>
+                </tr>
+              </thead>
+              <tbody id="productsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 3: CATALOG GRID                            -->
+    <!-- ============================================== -->
+    <section id="tab-catalog" class="tab-pane">
+      <div class="page-container">
+        <div class="page-head">
+          <div>
+            <h1 class="page-title">Каталог товаров (21 позиция)</h1>
+            <p class="page-lead">Единая 8-папочная структура подпапок</p>
+          </div>
+          <div class="category-chips" id="categoryChips">
+            <button class="filter-chip active" data-cat="all">Все (21)</button>
+            <button class="filter-chip" data-cat="футбол">Футбол (2)</button>
+            <button class="filter-chip" data-cat="хоккей">Хоккей (4)</button>
+            <button class="filter-chip" data-cat="аэрохоккей">Аэрохоккей (6)</button>
+            <button class="filter-chip" data-cat="трансформер">Трансформеры (4)</button>
+            <button class="filter-chip" data-cat="теннис">Теннис (3)</button>
+            <button class="filter-chip" data-cat="игры">Игры (2)</button>
+          </div>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 4: AI VISUAL INSPECTOR                     -->
+    <!-- ============================================== -->
+    <section id="tab-ai-inspector" class="tab-pane">
+      <div class="page-container">
+        <div class="page-head">
+          <div>
+            <h1 class="page-title">Сводка правок арт-директора</h1>
+            <p class="page-lead" id="auditSourceLine">Maccabi Mini · версия от 17.08.2026</p>
+          </div>
+          <div class="score-badge" id="auditOpenCount">32 замечания</div>
+        </div>
+
+        <div class="audit-triptych">
+          <div class="audit-block critical">
+            <h4><span id="auditCriticalCount">17</span> критичных замечаний</h4>
+            <ul id="auditCriticalList"></ul>
+          </div>
+
+          <div class="audit-block warning">
+            <h4><span id="auditImportantCount">15</span> важных замечаний</h4>
+            <ul id="auditImportantList"></ul>
+          </div>
+
+          <div class="audit-block info">
+            <h4><span id="auditTasksCount">34</span> задачи дизайнеру</h4>
+            <ul id="auditGlobalRulesList"></ul>
+          </div>
+        </div>
+
+        <div class="inspector-feed" id="inspectorSlidesList"></div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 5: DESIGN SYSTEMS                          -->
+    <!-- ============================================== -->
+    <section id="tab-design-systems" class="tab-pane">
+      <div class="page-container">
+        <div class="page-head">
+          <div>
+            <h1 class="page-title">Дизайн-системы и токены</h1>
+            <p class="page-lead">Стандарты оформления, шрифты и 4-слойная модель верстки</p>
+          </div>
+          <span class="badge-mini success">Активна: weekend_sport</span>
+        </div>
+
+        <div class="ds-cards-wrap">
+          <div class="ds-panel active">
+            <div class="ds-panel-head">
+              <h3>weekend_sport</h3>
+              <p>Динамичный спортивный стиль для маркетплейсов</p>
+            </div>
+            <div class="ds-tokens-table">
+              <div class="ds-row"><span>Градиент фона:</span><code>#004488 → #001A33 (135°)</code></div>
+              <div class="ds-row"><span>Акцентный цвет:</span><code>#FF2A2A (Красный)</code></div>
+              <div class="ds-row"><span>Типографика:</span><code>Montserrat ExtraBold / Inter</code></div>
+              <div class="ds-row"><span>Слои:</span><code>BASE → IMAGES → TEXT → OVERLAY</code></div>
+            </div>
+          </div>
+
+          <div class="ds-panel">
+            <div class="ds-panel-head">
+              <h3>premium_wood</h3>
+              <p>Премиальная текстура ореха и шампань для бильярда и элитных столов</p>
+            </div>
+            <div class="ds-tokens-table">
+              <div class="ds-row"><span>Основной фон:</span><code>#1A1412 (Тёмный орех)</code></div>
+              <div class="ds-row"><span>Акцентный цвет:</span><code>#D4AF37 (Шампань)</code></div>
+              <div class="ds-row"><span>Типографика:</span><code>Inter SemiBold</code></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL: TICKET EXPORT -->
+  <div class="modal-layer" id="ticketModal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <div>
+        <h3>Сводное ТЗ на доработку</h3>
+        <p>Актуальные замечания арт-директора по всему набору</p>
+        </div>
+        <button class="btn-close" id="closeTicketModalBtn">✕</button>
+      </div>
+      <div class="modal-content">
+        <textarea id="ticketTextarea" class="ticket-field" readonly></textarea>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-secondary btn-compact" id="copyJsonBtn">JSON</button>
+        <button class="btn btn-primary btn-compact" id="copyTicketBtn">Скопировать текст для Telegram</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=20260817-5"></script>
+</body>
+</html>
